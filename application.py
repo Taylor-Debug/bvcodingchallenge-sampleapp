@@ -13,4 +13,4 @@ def homepage():
 
 # HINT: This could be your first statistic!
 def get_average_overall_rating():
-    return stats_helper.caculate_ave_overall_rating(None)
+    return stats_helper.caculate_ave_overall_rating()

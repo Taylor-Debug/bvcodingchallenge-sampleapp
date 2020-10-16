@@ -1,0 +1,77 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color: lightgray;
+}
+
+h1, h2, h3, p{
+    padding: 0%;
+    margin: 0%;
+} 
+
+img{
+    display: inline;
+    width: 50px;
+    height: 50px;
+    float: left;
+    border-radius: 50%;
+    margin-top: 10px ;
+    margin-left: 5%;
+}
+
+.top{
+    
+    background: lightgray;
+}
+
+.content_top{
+    padding-top: 15px;
+    padding-left: 40%;
+    padding-bottom: 15px;
+}
+
+#slider {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+#slides{  /*To set the board of the outter box */
+    padding: 10px;
+    border: 0.5px solid #ccc;;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#overflow{
+    width: 100%;
+    overflow: hidden;
+}
+
+#slides .slide{
+    width: 25%;
+    float: left;
+    display: block;
+    height: 100%;
+    color: #fff;
+}
+
+
+#slides .slide_1{
+    background: #00171f;
+}
+#slides .slide_2{
+    background: #003459;
+}
+#slides .slide_3{
+    background: #007ea7;
+}
+#slides .slide_4{
+    background: #00a8e8;
+}
+.slide-content{
+    padding: 20%;
+}
