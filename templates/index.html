@@ -66,7 +66,7 @@
                     <!-- HINT: Bootstrap cards! - https://getbootstrap.com/docs/4.5/components/card/ -->
                     <div class="card shadow rounded">
                         <div class="card-body d-flex flex-column">
-                            <h6 class="card-subtitle mb-2 h6 text-radical-red text-uppercase">Stat Title</h6>
+                            <h6 class="card-subtitle mb-2 h6 text-radical-red text-uppercase">Overall Average Rating</h6>
                             <h4 class="card-title display-4"> {{ avg_r }}</h4>
                             <h5 class="mb-5">Stat sub title</h5>
                             <p class="card-text text-muted mt-auto">Stat footnote</p>
@@ -87,20 +87,20 @@
                         <table class="table table-striped bg-white">
                           <thead>
                           <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">Rank</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Taste Rating</th>
                           </tr>
                           </thead>
                           <tbody>
                           <!-- HINT: Jinja loops may also work well here! -->
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
+                            {% for x in top_five %}
+                            <tr>
+                            <th scope="row">1</th> 
+                            <td> {{x[0]}} </td>
+                            <td> {{x[1]}}</td>
+                            </tr>
+                            {% endfor %}
                           </tbody>
                         </table>
                       </div>
