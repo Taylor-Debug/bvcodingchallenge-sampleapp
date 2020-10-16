@@ -61,50 +61,34 @@
                       <h5 class="mb-3">Beer Ratings &amp; Reviews</h5>
                   </div>
               </div>
-<<<<<<< HEAD
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-                  <!-- HINT: You may want to look at Jinja loops - https://jinja.palletsprojects.com/en/2.11.x/templates/#list-of-control-structures -->
-                  <div class="col d-flex align-items-stretch mb-3">
-                    <!-- HINT: Bootstrap cards! - https://getbootstrap.com/docs/4.5/components/card/ -->
-                    <div class="card shadow rounded">
-                        <div class="card-body d-flex flex-column">
-                            <h6 class="card-subtitle mb-2 h6 text-radical-red text-uppercase">Overall Average Rating</h6>
-                            <h4 class="card-title display-4"> {{ avg_r }}</h4>
-                            <h5 class="mb-5">Stat sub title</h5>
-                            <p class="card-text text-muted mt-auto">Stat footnote</p>
+              <div id="slides">
+                <div id="overflow">
+                        <div class="slide slide_1">
+                            <div class="slide-content">
+                                <h2>Average Overall Rating</h2>
+                                <p>{{ avg_r }}</p>
+                            </div>
                         </div>
-=======
-
-              <div id="slider">
-                <div id="slides">
-                    <div id="overflow">
-                            <div class="slide slide_1">
-                                <div class="slide-content">
-                                    <h2>Slide 1</h2>
-                                    <p>{{ avg_r }} His</p>
-                                </div>
+                        <div class="slide slide_2">
+                            <div class="slide-content">
+                                <h2>Best Appearance </h2>
+                                <p>{{ best_style }}</p>
                             </div>
-                            <div class="slide slide_2">
-                                <div class="slide-content">
-                                    <h2>Slide 2</h2>
-                                    <p>Content for Slide 2</p>
-                                </div>
+                        </div>
+                        <div class="slide slide_3">
+                            <div class="slide-content">
+                                <h2>Average Taste Rating</h2>
+                                <p>{{ avg_t }}</p>
                             </div>
-                            <div class="slide slide_3">
-                                <div class="slide-content">
-                                    <h2>Slide 3</h2>
-                                    <p>Content for Slide 3</p>
-                                </div>
+                        </div>
+                        <div class="slide slide_4">
+                            <div class="slide-content">
+                                <h2>Average Palate Rating</h2>
+                                <p>{{ avg_p }}</p>
                             </div>
-                            <div class="slide slide_4">
-                                <div class="slide-content">
-                                    <h2>Slide 4</h2>
-                                    <p>Content for Slide 4</p>
-                                </div>
-                            </div>
->>>>>>> 4c581c53e25844fa47d682aae2e6aa9e3886a612
-                    </div>
+                        </div>
                 </div>
+            </div>
             </div>
           </div>
       </section>
@@ -129,8 +113,28 @@
                             {% for x in top_five %}
                             <tr>
                             <th scope="row">1</th> 
-                            <td> {{x[0]}} </td>
-                            <td> {{x[1]}}</td>
+                            <td> {{x[0][0]}} </td>
+                            <td> {{x[0][1]}}</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th> 
+                            <td> {{x[1][0]}} </td>
+                            <td> {{x[1][1]}}</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">3</th> 
+                            <td> {{x[2][0]}} </td>
+                            <td> {{x[2][1]}}</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">4</th> 
+                            <td> {{x[3][0]}} </td>
+                            <td> {{x[3][1]}}</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">5</th> 
+                            <td> {{x[4][0]}} </td>
+                            <td> {{x[4][1]}}</td>
                             </tr>
                             {% endfor %}
                           </tbody>
