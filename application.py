@@ -9,7 +9,7 @@ stats_helper = StatsHelper()
 @app.route('/')
 def homepage():
     # HINT: Pass variables through to the HTML using Flask - https://flask.palletsprojects.com/en/1.1.x/quickstart/#rendering-templates
-    return render_template('index.html', avg_r = caculate_ave_overall_rating())
+    return render_template('index.html', avg_r = StatsHelper.caculate_ave_overall_rating())
 
 # HINT: This could be your first statistic!
 def get_average_overall_rating():
