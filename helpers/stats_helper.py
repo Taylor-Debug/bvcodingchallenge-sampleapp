@@ -15,3 +15,6 @@ class StatsHelper():
     def calculate_another_stat(self):
       # all_rows = self.database.fetch_all("")
       return None
+
+    def myMethod_test(self):
+       result = self.database.fetch_one
