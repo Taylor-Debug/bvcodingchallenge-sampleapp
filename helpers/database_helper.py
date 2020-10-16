@@ -5,7 +5,7 @@ class Database:
 
     def __init__(self):
         self.con = mysql.connector.connect(
-            host="db",
+            host="127.0.0.1:3357",
             user="root",
             password="password",
             database="uu_code_challenge"
